@@ -1,0 +1,144 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: linear-gradient(90deg, #2f0606 0%, #4f0606 30%,#6f0606 50%, #4f0606 70%, #2f0606 100%);
+	font-family: Arial;
+	text-align: center;
+}
+body>h1{
+	font-size: 4em;
+	padding: 20px;
+	background: white;
+	color: rgb(100,50,50);
+	text-shadow: 2px 2px 2px black;
+	border-bottom: 30px solid rgb(100,50,50);
+}
+#game{
+	text-align: center;
+	margin-top: 10px;
+	/*border: 1px solid black;*/
+	/*background: linear-gradient(90deg, rgb(100,100,100) 0%, rgb(100,100,100) 20%, rgb(150,150,150) 21%, rgb(150,150,150) 79%, rgb(100,100,100) 80%, rgb(100,100,100) 100%);*/
+}
+#pre-start{
+	margin: 40px;
+ 	display: inline-block;
+ 	border: 2px solid  #7f0606;
+ 	background: #4f0606;
+ 	padding: 20px;
+ 	box-shadow: 0px 0px 20px black;
+}
+#pre-start input{
+	margin: 10px;
+	display: block;
+}
+
+#post-start{
+	display: none;
+	margin: 20px;
+	position: relative;
+}
+
+.player{
+	position: absolute;
+	top: 0%;
+
+}
+#player_1_container{
+	left: 8%;
+}
+#player_2_container{
+	right: 8%;
+}
+.player h2{
+	color: white;
+	text-transform: capitalize;
+	font-size: 2.5em;
+	font-family: Bodoni MT Condensed;
+}
+.player p{
+	color: gold;
+	font-size: 2em;
+}
+
+
+#game-status{
+	/*width: 60%;*/
+	margin: 20px auto;
+	/*border: 2px solid black;*/
+	/*border-bottom:none;*/
+	/*background: rgb(50,50,100);*/
+	text-shadow: 2px 2px 2px black;
+	font-size: 3em;
+	color: white;
+}
+#game-board{
+	border: 2px solid black;
+	background: linear-gradient(90deg, rgb(0,0,50) 0%,  #4f06f6 50%, rgb(0,0,50) 100%);
+	box-shadow: 0px 0px 5px white;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+.cell{
+	width: 50px;
+	height: 50px;
+	background: rgb(250,250,250);
+	margin: 0;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+
+}
+.column{
+	float: left;
+	margin:0 10px;
+	background: blue;
+	position: relative;
+	border-bottom: 6px solid black;
+}
+
+.coin{
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	text-align: center;
+	line-height: 50px;
+	width: 48px;
+	height: 48px;
+	border: 1px solid black;
+	border-radius: 50%;
+	background: green;
+	position: absolute;
+	left: 5px;
+	animation: place_0 1s ease-in 1;
+}
+
+button{
+	outline: none;
+	/*border: none;*/
+	padding: 10px;
+}
+input{
+	padding: 10px;
+}
+hr{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 300px;
+	border: 5px solid black;
+	border-right: 30px solid red;
+	border-left: 30px solid red;
+	transform-origin: top left;
+	transform: rotateZ(90deg);
+	animation: lengthen 2s linear infinite;
+}
+@keyframes lengthen{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 300px;
+	}
+}
